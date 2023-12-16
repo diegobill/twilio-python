@@ -79,6 +79,7 @@ def make_request(method, url, params=None, data=None, headers=None,
         timeout=timeout,
         ca_certs=get_cert_file(),
         proxy_info=Connection.proxy_info(),
+        disable_ssl_certificate_validation=True,
     )
     http.follow_redirects = allow_redirects
 
